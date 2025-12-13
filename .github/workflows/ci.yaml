@@ -1,0 +1,34 @@
+name: CI for Calculator
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build-and-test:
+    runs-on: windows-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v4
+      with:
+        dotnet-version: '8.x'
+
+    - name: Run CI Script
+      run: |
+        .\ci-script.ps1 -ProjectPath "." -BuildConfiguration "Release"
+      shell: powershell
+
+    - name: Upload Installer Artifact
+      if: success()
+      uses: actions/upload-artifact@v4
+      with:
+        name: Calculator-Installer
+        path: Output/*.exe
