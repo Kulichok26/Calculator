@@ -1,0 +1,38 @@
+## Visual Studio ##
+bin/
+obj/
+.vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+TestResults/
+*.cache
+*.log
+*.tss
+
+## Packages ##
+packages/
+**/packages/*
+*.nupkg
+*.ncrunchproject
+
+## Build results ##
+[Dd]ebug/
+[Dd]ebugPublic/
+[Rr]elease/
+[Rr]eleases/
+x64/
+x86/
+bld/
+[Bb]in/
+[Oo]bj/
+[Ll]og/
+
+## User-specific files ##
+*.userprefs
+
+## IDE ##
+*.swp
+*.*~
+~$*
