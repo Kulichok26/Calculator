@@ -70,7 +70,7 @@ Name: "desktopicon"; Description: "Создать значок на рабоче
 [Files]
 ;копируются все необходимые файлы
 Source: "{#SourceDir}*"; DestDir: "{app}"; Flags: ignoreversion recursesubdirs
-Source: "calculator_3534.ico"; DestDir: "{app}"; Flags: ignoreversion
+;Source: "calculator_3534.ico"; DestDir: "{app}"; Flags: ignoreversion
 
 ;-----------------------------------------------------------------------
 ;Создание ярлыков
